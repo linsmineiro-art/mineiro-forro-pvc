@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mineiro Forro PVC | Qualidade e Elegância</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --preto: #050505;
+  --preto-sec: #111111;
+  --cinza-card: #1a1a1a;
+  --cinza-borda: #2b2b2b;
+  --dourado: #d4af37;
+  --dourado-hover: #f0c550;
+  --texto: #ffffff;
+  --texto-suave: #b8b8b8;
+  --texto-escuro: #111111;
+  --radius: 16px;
+  --sombra: 0 10px 35px rgba(0,0,0,0.45);
+}
+  html { scroll-behavior: smooth; }
+
+  body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--texto);
+  background: var(--preto);
+  line-height: 1.6;
+}
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+  }
+
+  /* HEADER */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1f1f1f;
+    padding: 0 5%;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--texto);
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--verde);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--verde);
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--texto-suave);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+  color: var(--dourado);
+}
+
+.nav-cta {
+  background: #d4af37;
+  color: #000 !important;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700 !important;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(212,175,55,0.3);
+}
+
+.nav-cta:hover {
+  background: #f0c550 !important;
+  transform: translateY(-2px);
+}
+
+  /* HERO */
+  .hero {
+  min-height: 100vh;
+  background:
+  radial-gradient(circle at top right, rgba(212,175,55,0.12), transparent 30%),
+  linear-gradient(135deg, #050505 0%, #111111 50%, #1b1b1b 100%);
+  display: flex;
+  align-items: center;
+  padding: 120px 5% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -200px;
+    width: 600px; height: 600px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -150px; left: -100px;
+    width: 400px; height: 400px;
+    background: rgba(245,197,24,0.08);
+    border-radius: 50%;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245,197,24,0.15);
+    border: 1px solid rgba(245,197,24,0.4);
+    color: var(--amarelo);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 4.5vw, 58px);
+    color: white;
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+
+  .hero h1 span {
+    color: var(--amarelo);
+  }
+
+  .hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 40px;
+    max-width: 480px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--amarelo);
+    color: #1a1a18;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,197,24,0.3); }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  /* HERO VISUAL */
+  .hero-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius);
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-card:first-child {
+    grid-column: span 2;
+    background: rgba(255,255,255,0.14);
+  }
+
+  .hero-card-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .hero-card-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .hero-card-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 4px;
+  }
+
+  .price-tag {
+    background: var(--amarelo);
+    color: var(--texto);
+    font-size: 28px;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    padding: 4px 0;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 96px 5%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--verde-suave);
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(28px, 3vw, 42px);
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .section-header p {
+    font-size: 17px;
+    color: #c7c7c7;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* PRODUTOS */
+  #produtos { background: var(--cinza); }
+
+  .produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .produto-card {
+    background: var(--cinza-card);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  }
+
+  .produto-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    position: relative;
+  }
+
+  .produto-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--amarelo);
+    color: var(--texto);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+  }
+
+  .produto-body {
+    padding: 24px;
+  }
+
+  .produto-body h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .produto-body p {
+    font-size: 14px;
+    color: #c9c9c9;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .produto-specs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .spec-tag {
+    background: rgba(212,175,55,0.12);
+  color: var(--dourado);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+
+  .produto-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-top: 1px solid var(--cinza-medio);
+  }
+
+  .preco {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .preco-label {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .preco-valor {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dourado);
+  }
+
+  .preco-unidade {
+    font-size: 13px;
+    color: var(--texto-suave);
+  }
+
+  .btn-comprar {
+  background: var(--dourado);
+  color: #111;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-comprar:hover {
+  background: var(--dourado-hover);
+  transform: translateY(-2px);
+}
+
+  /* VANTAGENS */
+  #vantagens {
+  background: #0d0d0d;
+}
+
+  .vantagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .vantagem-item {
+    text-align: center;
+    padding: 36px 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--cinza-medio);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: var(--cinza-card);
+  }
+
+  .vantagem-item:hover {
+    border-color: var(--verde-claro);
+    box-shadow: 0 4px 20px rgba(26,92,58,0.08);
+  }
+
+  .vantagem-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--verde-suave);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+  }
+
+  .vantagem-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .vantagem-item p {
+    font-size: 14px;
+    color: var(--texto-suave);
+    line-height: 1.7;
+  }
+
+  /* COMO FUNCIONA */
+  #como-comprar { background: var(--verde); }
+
+  #como-comprar .section-tag { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); }
+  #como-comprar .section-header h2 { color: white; }
+  #como-comprar .section-header p { color: rgba(255,255,255,0.7); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .step {
+    text-align: center;
+    padding: 32px 20px;
+  }
+
+  .step-num {
+    width: 56px;
+    height: 56px;
+    background: var(--amarelo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--texto);
+    margin: 0 auto 20px;
+  }
+
+  .step h3 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+  }
+
+  /* DEPOIMENTOS */
+  #depoimentos { background: var(--cinza); }
+
+  .depo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .depo-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--sombra);
+  }
+
+  .depo-estrelas {
+    color: var(--amarelo);
+    font-size: 18px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .depo-texto {
+    font-size: 15px;
+    color: var(--texto-suave);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .depo-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .depo-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .depo-nome {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--texto);
+  }
+
+  .depo-cidade {
+    font-size: 13px;
+    color: var(--texto-suave);
+  }
+
+  /* ORÇAMENTO */
+  #orcamento { background: white; }
+
+  .orcamento-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+     background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+    border-radius: 20px;
+    padding: 48px;
+    border: 1px solid var(--cinza-medio);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dourado);
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+.form-group select {
+  color: white;
+}
+
+ .form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--radius);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  background: #111111;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--dourado);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+}
+
+  .btn-submit {
+    width: 100%;
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover { background: var(--verde-claro); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: #050505;
+  color: #d6d6d6;
+  padding: 64px 5% 32px;
+  border-top: 1px solid rgba(212,175,55,0.15);
+}
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+  }
+
+  .footer-brand .logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dourado);
+}
+
+  .footer-brand p {
+    font-size: 14px;
+  line-height: 1.8;
+  max-width: 280px;
+  color: #bdbdbd;
+}
+
+  .footer-col h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--dourado);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    color: #d0d0d0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+  .footer-col ul li a:hover { color: var(--dourado);}
+
+  .footer-bottom {
+     max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(212,175,55,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #8d8d8d;
+}
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+  }
+
+  .location-box {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 18px 22px;
+  border-radius: 16px;
+  max-width: 420px;
+  backdrop-filter: blur(5px);
+}
+
+.location-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(212,175,55,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+.footer-col ul li {
+  margin-bottom: 14px;
+}
+
+.footer-grid {
+  align-items: flex-start;
+}
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { display: none; }
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">🏠</div>
+      <div>
+<div class="logo-text">Mineiro</div>
+<div class="logo-sub">Forro PVC</div>
+      </div>
+    </a>
+<ul class="nav-links">
+  <li><a href="#produtos">Produtos</a></li>
+  <li><a href="#vantagens">Vantagens</a></li>
+  <li><a href="#como-comprar">Como Funciona</a></li>
+  <li><a href="#depoimentos">Clientes</a></li>
+  <li><a href="#orcamento" class="nav-cta">Pedir Orçamento</a></li>
+</ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⭐ Mais de 10.000 clientes satisfeitos</div>
+      <h1>Mineiro <span>Forro PVC</span><br>Elegância e Qualidade para seu Ambiente</h1>
+      <p>Especialistas em forro PVC premium em Minas Gerais. Atendimento profissional, instalação rápida e acabamento impecável para residências e empresas.
+      </p>
+      <div class="hero-buttons">
+        <a href="#produtos" class="btn-primary">Ver Produtos</a>
+        <a href="#orcamento" class="btn-outline">Pedir Orçamento</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">10k+</div>
+          <div class="stat-label">Clientes</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Anos no mercado</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Garantia</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-label">Produto em destaque</div>
+        <div class="hero-card-value">Forro PVC Liso Branco</div>
+        <div class="hero-card-desc">Acabamento perfeito para tetos e paredes</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">A partir de</div>
+        <div class="price-tag">R$ 19,90</div>
+        <div class="hero-card-desc">por metro linear</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Entrega</div>
+        <div class="hero-card-value">Todo Brasil</div>
+        <div class="hero-card-desc">Rápida e segura</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="location-box">
+  <div class="location-icon">📍</div>
+  <div>
+    <strong>Mineiro Forro PVC</strong><br>
+    Teófilo Otoni - Minas Gerais<br>
+    Bairro Grão Pará nº 200
+  </div>
+</div>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <div class="section-header">
+    <div class="section-tag">Catálogo</div>
+    <h2>Nossos Produtos</h2>
+    <p>Linha completa de forro PVC para todos os tipos de ambiente e projeto</p>
+  </div>
+  <div class="produtos-grid">
+
+<div class="produto-card">
+  <div class="produto-img" style="background:#202020;">🏠
+    <span class="produto-badge">Mais Vendido</span>
+  </div>
+
+  <div class="produto-body">
+    <h3>Forro PVC Liso Branco</h3>
+
+    <p>
+      Acabamento moderno, elegante e fácil de limpar.
+      Ideal para residências, comércios e ambientes internos.
+    </p>
+
+    <div class="produto-specs">
+      <span class="spec-tag">8mm espessura</span>
+      <span class="spec-tag">Impermeável</span>
+      <span class="spec-tag">Anti-mofo</span>
+      <span class="spec-tag">UV Protegido</span>
+      <span class="spec-tag">Alta resistência</span>
+      <span class="spec-tag">Isola calor</span>
+      <span class="spec-tag">Reduz ruído</span>
+    </div>
+  </div>
+
+  <div class="produto-footer">
+    <div class="preco">
+      <span class="preco-label">CONSULTE</span>
+      <span class="preco-valor">ORÇAMENTO</span>
+      <span class="preco-unidade">Atendimento personalizado</span>
+    </div>
+
+    <a href="#orcamento" class="btn-comprar">
+      Solicitar
+    </a>
+  </div>
+</div>
+
+
+<div class="produto-card">
+  <div class="produto-img" style="background:#202020;">✨
+  </div>
+
+  <div class="produto-body">
+    <h3>Forro PVC Comum Frisado</h3>
+
+    <p>
+      Modelo clássico frisado com ótimo acabamento
+      e excelente custo-benefício.
+    </p>
+
+    <div class="produto-specs">
+      <span class="spec-tag">8mm espessura</span>
+      <span class="spec-tag">Impermeável</span>
+      <span class="spec-tag">Anti-mofo</span>
+      <span class="spec-tag">UV Protegido</span>
+      <span class="spec-tag">Alta resistência</span>
+      <span class="spec-tag">Isola calor</span>
+      <span class="spec-tag">Reduz ruído</span>
+    </div>
+  </div>
+
+  <div class="produto-footer">
+    <div class="preco">
+      <span class="preco-label">CONSULTE</span>
+      <span class="preco-valor">ORÇAMENTO</span>
+      <span class="preco-unidade">Atendimento personalizado</span>
+    </div>
+
+    <a href="#orcamento" class="btn-comprar">
+      Solicitar
+    </a>
+  </div>
+</div>
+
+
+<div class="produto-card">
+  <div class="produto-img" style="background:#202020;">🌳
+    <span class="produto-badge">Premium</span>
+  </div>
+
+  <div class="produto-body">
+    <h3>Forro Amadeirado Liso</h3>
+
+    <p>
+      Visual sofisticado imitando madeira natural,
+      trazendo elegância para qualquer ambiente.
+    </p>
+
+    <div class="produto-specs">
+      <span class="spec-tag">8mm espessura</span>
+      <span class="spec-tag">Impermeável</span>
+      <span class="spec-tag">Anti-mofo</span>
+      <span class="spec-tag">UV Protegido</span>
+      <span class="spec-tag">Alta resistência</span>
+      <span class="spec-tag">Isola calor</span>
+      <span class="spec-tag">Reduz ruído</span>
+    </div>
+  </div>
+
+  <div class="produto-footer">
+    <div class="preco">
+      <span class="preco-label">CONSULTE</span>
+      <span class="preco-valor">ORÇAMENTO</span>
+      <span class="preco-unidade">Atendimento personalizado</span>
+    </div>
+
+    <a href="#orcamento" class="btn-comprar">
+      Solicitar
+    </a>
+  </div>
+</div>
+
+
+<div class="produto-card">
+  <div class="produto-img" style="background:#202020;">🪵
+  </div>
+
+  <div class="produto-body">
+    <h3>Forro Amadeirado Frisado</h3>
+
+    <p>
+      Modelo amadeirado com acabamento frisado,
+      perfeito para ambientes sofisticados.
+    </p>
+
+    <div class="produto-specs">
+      <span class="spec-tag">8mm espessura</span>
+      <span class="spec-tag">Impermeável</span>
+      <span class="spec-tag">Anti-mofo</span>
+      <span class="spec-tag">UV Protegido</span>
+      <span class="spec-tag">Alta resistência</span>
+      <span class="spec-tag">Isola calor</span>
+      <span class="spec-tag">Reduz ruído</span>
+    </div>
+  </div>
+
+  <div class="produto-footer">
+    <div class="preco">
+      <span class="preco-label">CONSULTE</span>
+      <span class="preco-valor">ORÇAMENTO</span>
+      <span class="preco-unidade">Atendimento personalizado</span>
+    </div>
+
+    <a href="#orcamento" class="btn-comprar">
+      Solicitar
+    </a>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- VANTAGENS -->
+<section id="vantagens">
+  <div class="section-header">
+    <div class="section-tag">Por que escolher</div>
+    <h2>Vantagens do Forro PVC</h2>
+    <p>Descubra por que o forro PVC é a escolha inteligente para o seu projeto</p>
+  </div>
+  <div class="vantagens-grid container">
+    <div class="vantagem-item">
+      <div class="vantagem-icon">💧</div>
+      <h3>Impermeável</h3>
+      <p>Não absorve água nem umidade, ideal para banheiros, cozinhas e áreas úmidas.</p>
+    </div>
+    <div class="vantagem-item">
+      <div class="vantagem-icon">🛡️</div>
+      <h3>Durável</h3>
+      <p>Material resistente que não apodrece, não enferruja e dura décadas sem manutenção.</p>
+    </div>
+    <div class="vantagem-item">
+      <div class="vantagem-icon">🧹</div>
+      <h3>Fácil de Limpar</h3>
+      <p>Basta passar um pano úmido. Não acumula poeira, fungos ou mofo.</p>
+    </div>
+    <div class="vantagem-item">
+      <div class="vantagem-icon">⚡</div>
+      <h3>Instalação Rápida</h3>
+      <p>Sistema encaixe simples. Um ambiente médio é instalado em poucas horas.</p>
+    </div>
+    <div class="vantagem-item">
+      <div class="vantagem-icon">💰</div>
+      <h3>Custo-Benefício</h3>
+      <p>Mais barato que gesso, madeira e outros forros, com a mesma ou maior durabilidade.</p>
+    </div>
+    <div class="vantagem-item">
+      <div class="vantagem-icon">🌿</div>
+      <h3>Ecológico</h3>
+      <p>Material 100% reciclável. Ajuda a preservar florestas evitando o uso de madeira.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO COMPRAR -->
+<section id="como-comprar">
+  <div class="section-header">
+    <div class="section-tag">Simples e Rápido</div>
+    <h2>Como Comprar</h2>
+    <p>Pediu, chegou. Processo simples do começo ao fim.</p>
+  </div>
+  <div class="steps-grid container">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Escolha o Produto</h3>
+      <p>Navegue pelo nosso catálogo e escolha o forro PVC ideal para o seu projeto.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Preencha o Formulário</h3>
+      <p>Informe as medidas do ambiente e seus dados para recebermos seu pedido.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Receba o Orçamento</h3>
+      <p>Nossa equipe envia o orçamento personalizado em até 2 horas via WhatsApp ou e-mail.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Entrega Garantida</h3>
+      <p>Confirmado o pedido, entregamos em todo o Brasil com prazo e qualidade garantidos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-header">
+    <div class="section-tag">Clientes Felizes</div>
+    <h2>O que dizem sobre nós</h2>
+    <p>Clientes satisfeitos em toda região do Sudeste de Minas Gerais, principalmente em Teófilo Otoni, Nanuque, Itaobim, Águas Formosas, Carlos Chagas e cidades vizinhas.
+</p>
+  </div>
+  <div class="depo-grid container">
+    <div class="depo-card">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"Produto excelente! Instalei no quarto e na cozinha e ficou perfeito. Entrega rápida e o preço é muito justo. Recomendo demais!"</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">MR</div>
+        <div>
+          <div class="depo-nome">Maria Regina Silva</div>
+          <div class="depo-cidade">Teófilo Otoni, MG</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"Compro sempre aqui para minhas obras. Material de qualidade superior, prazo cumprido e atendimento nota 10. Parceiro de confiança!"</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">JC</div>
+        <div>
+          <div class="depo-nome">João Carlos Oliveira</div>
+          <div class="depo-cidade">Belo Horizonte, MG</div>
+        </div>
+      </div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-texto">"O forro termoacústico fez uma diferença enorme no calor da minha casa. Valeu muito o investimento. Equipe super atenciosa!"</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">AP</div>
+        <div>
+          <div class="depo-nome">Ana Paula Ferreira</div>
+          <div class="depo-cidade">Nanuque, MG</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section id="orcamento">
+  <div class="section-header">
+    <div class="section-tag">Fale Conosco</div>
+    <h2>Solicite seu Orçamento</h2>
+    <p>Preencha o formulário e receba nossa proposta em até 2 horas!</p>
+  </div>
+  <div class="orcamento-wrapper">
+    <form onsubmit="enviarOrcamento(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" id="email" placeholder="seu@email.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Produto de interesse</label>
+          <select id="produto">
+            <option value="">Selecione...</option>
+            <option>Forro PVC Liso Branco</option>
+            <option>Forro PVC Madeirado</option>
+            <option>Forro PVC Termoacústico</option>
+            <option>Forro PVC para Área Externa</option>
+            <option>Forro PVC Texturizado</option>
+            <option>Kit Completo com Instalação</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Metragem aproximada (m²)</label>
+          <input type="number" id="metragem" placeholder="Ex: 30">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Mensagem ou informações adicionais</label>
+        <textarea id="mensagem" placeholder="Descreva seu projeto, ambiente, prazo..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">📩 Enviar Pedido de Orçamento</button>
+    </form>
+    <div id="sucesso" style="display:none; text-align:center; padding: 32px 0;">
+      <div style="font-size: 48px; margin-bottom: 16px;">✅</div>
+      <h3 style="font-size: 22px; color: var(--verde); margin-bottom: 12px;">Pedido Enviado com Sucesso!</h3>
+      <p style="color: var(--texto-suave);">Nossa equipe entrará em contato em até 2 horas pelo WhatsApp. Obrigado!</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo-text">Mineiro Forro PVC</span>
+      <p>Referência em forro PVC de qualidade. Atendemos todo o Brasil com produtos de excelência e preços competitivos desde 2009.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produtos</h4>
+      <ul>
+        <li><a href="#">Forro Liso</a></li>
+        <li><a href="#">Forro Madeirado</a></li>
+        <li><a href="#">Termoacústico</a></li>
+        <li><a href="#">Área Externa</a></li>
+        <li><a href="#">Kit Instalação</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#">📞 (33) 98895-2328</a></li>
+        <li><a href="#">📧 linsmineiro@gmail.com</a></li>
+        <li><a href="#">📍 Teófilo Otoni - MG</a></li>
+        <li><a href="#">⏰ Seg–Sex 8h–18h</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Mineiro Forro PVC. Todos os direitos reservados.</span>
+    <span>CNPJ: 00.000.000/0001-00</span>
+  </div>
+</footer>
+
+
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5533988952328?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="whatsapp-float" target="_blank" title="">
+  💬
+</a>
+
+<script>
+  function enviarOrcamento(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const telefone = document.getElementById('telefone').value;
+    const produto = document.getElementById('produto').value;
+    const metragem = document.getElementById('metragem').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const texto = `Olá! Vim pelo site e gostaria de um orçamento.%0ANome: ${encodeURIComponent(nome)}%0ATelefone: ${encodeURIComponent(telefone)}%0AProduto: ${encodeURIComponent(produto)}%0AMetragem: ${encodeURIComponent(metragem)} m²%0AMensagem: ${encodeURIComponent(mensagem)}`;
+
+    window.open(`https://wa.me/5533988952328?text=${texto}`, '_blank');
+
+    document.querySelector('#orcamento form').style.display = 'none';
+    document.getElementById('sucesso').style.display = 'block';
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
